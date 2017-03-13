@@ -3,6 +3,10 @@ logs
 *.log
 npm-debug.log*
 
+# Example directories
+examples/input
+examples/output
+
 # Runtime data
 pids
 *.pid
