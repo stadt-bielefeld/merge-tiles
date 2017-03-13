@@ -1,6 +1,6 @@
 {
   "name": "merge-tiles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "It allows you to merge a directory of wms-downloader tiles to a single tile.",
   "main": "index.js",
   "bin": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/stadt-bielefeld/merge-tiles.git"
   },
   "bugs": {
-  "url": "https://github.com/stadt-bielefeld/merge-tiles/issues"
+    "url": "https://github.com/stadt-bielefeld/merge-tiles/issues"
   },
   "homepage": "https://github.com/stadt-bielefeld/merge-tiles#readme",
   "keywords": [
