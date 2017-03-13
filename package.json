@@ -10,6 +10,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "node_modules/.bin/gulp"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stadt-bielefeld/merge-tiles.git"
+  },
+  "bugs": {
+  "url": "https://github.com/stadt-bielefeld/merge-tiles/issues"
+  },
+  "homepage": "https://github.com/stadt-bielefeld/merge-tiles#readme",
+  "keywords": [
+    "wms",
+    "downloader",
+    "tiles",
+    "merge",
+    "append",
+    "single",
+    "tile"
+  ],
   "author": "Jens Pabel <jens.pabel@bielefeld.de>",
   "license": "MIT",
   "dependencies": {
