@@ -41,6 +41,7 @@ Options:
    -i, --input [path]      Input directory of wms-downloader tiles. Default is the current directory.
    -o, --output [path]     Output directory of single tile. Default is the current directory.
    -w, --workers [number]  Count of graphicsmagick workers. Default is 1.
+   -f, --formats [ext]     List of formats (gif_tif_png_jpg). Convert the single tile in the listed formats.
 ```
 
 With default options:
@@ -51,15 +52,25 @@ merge
 
 With custom options:
 ```sh
-merge -i ./input -o ./output -w 2
+merge -i ./input -o ./output -w 2 -f tif_gif_jpg
 ```
 
 ### Node.js:
 ```js
 let mergeTiles = require('merge-tiles').mergeTiles;
 
-mergeTiles('./input', './output', 2, (err)=>{
+mergeTiles('./input', './output', 2, (err) => {
   if(err){
+    console.log(err);
+  }
+});
+```
+
+```js
+let convertImage = require('merge-tiles').convertImage;
+
+convertImage('./output/all.png', ['tif', 'gif', 'jpg'], (err) => {
+  if (err) {
     console.log(err);
   }
 });

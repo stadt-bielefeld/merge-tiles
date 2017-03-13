@@ -35,6 +35,16 @@
               
                 
                 <li><a
+                  href='#isimage'
+                  class="">
+                  isImage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#mergetiles'
                   class="">
                   mergeTiles
@@ -88,16 +98,6 @@
                   href='#imageinfo'
                   class="">
                   ImageInfo
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#isimage'
-                  class="">
-                  isImage
                   
                 </a>
                 
@@ -157,7 +157,7 @@
             <span class='code bold'>formats</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
 	    Array of output formats like 
 [
-'gif','tif','jpg'
+'gif','tif','jpg','png'
 ]
 
           </div>
@@ -182,6 +182,93 @@
 
   
 
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-keyword">let</span> convertImage = <span class="hljs-built_in">require</span>(<span class="hljs-string">'merge-tiles'</span>).convertImage;
+
+convertImage(__dirname + <span class="hljs-string">'/output/all.png'</span>, [<span class="hljs-string">'tif'</span>, <span class="hljs-string">'gif'</span>, <span class="hljs-string">'jpg'</span>], (err) =&gt; {
+  <span class="hljs-keyword">if</span> (err) {
+    <span class="hljs-built_in">console</span>.log(err);
+  }
+});</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+            <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isimage'>
+      isImage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks, if the file is a supported image.</p>
+
+
+  <div class='pre p1 fill-light mt0'>isImage(file: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (ImageInfo | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>file</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Filename of a wms-downloader tile.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(ImageInfo | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>:
+        Unsupported image: false, supported image: Object like { ext: 'png', wfExt: 'pgw' }
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>isImage(<span class="hljs-string">'x1y2.png'</span>); <span class="hljs-comment">// =&gt; { ext: 'png', wfExt: 'pgw' }</span>
+isImage(<span class="hljs-string">'x1y2.svg'</span>); <span class="hljs-comment">// =&gt; false</span></pre>
+    
   
 
   
@@ -641,19 +728,6 @@ This object contains the value after x and after y as integer value.</p>
   
 
   
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>file</span> <code class='quiet'>(any)</code>
-	    
-          </div>
-          
-        </div>
-      
-    </div>
-  
 
   
     <div class='py1 quiet mt1 prose-big'>Properties</div>
@@ -685,81 +759,6 @@ This object contains the value after x and after y as integer value.</p>
     
       
       <pre class='p1 overflow-auto round fill-light'>{ <span class="hljs-attr">ext</span>: <span class="hljs-string">'png'</span>, <span class="hljs-attr">wfExt</span>: <span class="hljs-string">'pgw'</span> }</pre>
-    
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-            <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='isimage'>
-      isImage
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Checks, if the file is a supported image.</p>
-
-
-  <div class='pre p1 fill-light mt0'>isImage(file: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): (<a href="#imageinfo">ImageInfo</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</div>
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>file</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    Filename of a wms-downloader tile.
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>(<a href="#imageinfo">ImageInfo</a> | <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a>)</code>:
-        Unsupported image: false, supported image: Object like { ext: 'png', wfExt: 'pgw' }
-
-      
-    
-  
-
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Example</div>
-    
-      
-      <pre class='p1 overflow-auto round fill-light'>isImage(<span class="hljs-string">'x1y2.png'</span>); <span class="hljs-comment">// =&gt; { ext: 'png', wfExt: 'pgw' }</span>
-isImage(<span class="hljs-string">'x1y2.svg'</span>); <span class="hljs-comment">// =&gt; false</span></pre>
     
   
 
