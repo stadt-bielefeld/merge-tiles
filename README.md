@@ -36,10 +36,10 @@ npm install -g merge-tiles
 
 ```
 Options:
-   -h, --help            output usage information
-   -V, --version         output the version number
-   -i, --input [path]    Input directory of wms-downloader tiles. Default is the current directory.
-   -o, --output [path]   Output directory of single tile. Default is the current directory.
+   -h, --help              Output usage information
+   -V, --version           Output the version number
+   -i, --input [path]      Input directory of wms-downloader tiles. Default is the current directory.
+   -o, --output [path]     Output directory of single tile. Default is the current directory.
    -w, --workers [number]  Count of graphicsmagick workers. Default is 1.
 ```
 
@@ -54,7 +54,7 @@ With custom options:
 merge -i ./input -o ./output -w 2
 ```
 
-Node.js:
+### Node.js:
 ```js
 let mergeTiles = require('merge-tiles').mergeTiles;
 
