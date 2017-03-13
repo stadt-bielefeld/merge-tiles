@@ -1,0 +1,8 @@
+Die von der Stadt Bielefeld angebotenen und in ihrem Eigentum befindlichen Daten und Kartenbilder der BielefeldKARTE werden bereitgestellt unter der Lizenz Creative Commons Attribution 4.0 International (CC BY 4.0). 
+Nach dieser Lizenz ist es gestattet die Kartenbilder zu kopieren, zu verbreiten, öffentlich zugänglich zu machen, Abwandlungen und Bearbeitungen anzufertigen sowie die Kartenbilder kommerziell zu nutzen. 
+Weiter geben die Lizenzbedingungen vor, dass angeben werden muss, ob und in welcher Form Änderungen vorgenommen wurden. 
+
+Der Quellenvermerk ist bei jeder Nutzung erforderlich und in diesem Fall wie folgt auszugestalten: 
+© Stadt Bielefeld, Amt für Geoinformation und Kataster (CC BY 4.0) 
+
+Darüber hinaus sind die Daten der BielefeldKARTE Bestandteil des Open Street Map Datenbankwerks. In diesem Fall ist kein Quellenvermerk erforderlich.

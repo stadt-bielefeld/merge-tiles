@@ -10,10 +10,9 @@ let mergeTiles = require(__dirname + '/../index.js').mergeTiles;
 program.version(packageJson.version);
 
 //Options
-program.option('-i, --input [type]', 'Input directory of wms-downloader tiles. Default is the current directory.');
-program.option('-o, --output [type]', 'Output directory of single tile. Default is the current directory.');
-program.option('-w, --workers [type]', 'Count of graphicsmagick workers. Default is 1.');
-
+program.option('-i, --input [path]', 'Input directory of wms-downloader tiles. Default is the current directory.');
+program.option('-o, --output [path]', 'Output directory of single tile. Default is the current directory.');
+program.option('-w, --workers [number]', 'Count of graphicsmagick workers. Default is 1.');
 
 //Examples
 program.on('--help', function() {
@@ -58,8 +57,6 @@ console.log('  Workers: ' + program.workers);
 mergeTiles(program.input,program.output,parseInt(program.workers),(err)=>{
   if(err){
     console.log(err);
-  }else{
-    console.log('DDDD');
   }
 });
 

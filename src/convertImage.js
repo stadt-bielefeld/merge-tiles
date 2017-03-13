@@ -6,10 +6,10 @@ let gm = require('gm');
 //-- Modules -------------------------------------------------------------------
 
 /**
- * [convertImage description]
- * @param  {[type]}   file     [description]
- * @param  {[type]}   formats  [description]
- * @param  {Function} callback [description]
+ * Converts an image in a list other formats.
+ * @param  {string}   file     Path of the input file
+ * @param  {array}   formats  Array of output formats like ['gif','tif','jpg']
+ * @param  {Function} callback Callback like (err) => {}
  */
 function convertImage(file, formats, callback){
 

@@ -126,10 +126,10 @@
   </div>
   
 
-  <p>[convertImage description]</p>
+  <p>Converts an image in a list other formats.</p>
 
 
-  <div class='pre p1 fill-light mt0'>convertImage(file: [type], formats: [type], callback: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</div>
+  <div class='pre p1 fill-light mt0'>convertImage(file: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, formats: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>, callback: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</div>
   
   
 
@@ -145,10 +145,8 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>file</span> <code class='quiet'>([type])</code>
-	    [
-description
-]
+            <span class='code bold'>file</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Path of the input file
 
           </div>
           
@@ -156,9 +154,10 @@ description
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>formats</span> <code class='quiet'>([type])</code>
-	    [
-description
+            <span class='code bold'>formats</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">array</a>)</code>
+	    Array of output formats like 
+[
+'gif','tif','jpg'
 ]
 
           </div>
@@ -168,9 +167,7 @@ description
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>callback</span> <code class='quiet'>(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a>)</code>
-	    [
-description
-]
+	    Callback like (err) => {}
 
           </div>
           
