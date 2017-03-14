@@ -88,6 +88,7 @@ function mergeTiles(inputDir, outputDir, workers, callback) {
 
     let currentWorkers = 0; //Current gm workers for creation of cols
     let currentCol = 0; //Current col
+    let finishedCol = 0;
 
     //Observer interval for the workes
     let createColsInterval = setInterval(() => {
@@ -112,7 +113,7 @@ function mergeTiles(inputDir, outputDir, workers, callback) {
           }
           colImg.write(outputDir + '/' + tempCurrentCol + '.' + inputExt, (err) => {
             currentWorkers--;
-
+            finishedCol++;
             if (err) {
               clearInterval(createColsInterval);
               callback(err);
@@ -124,7 +125,7 @@ function mergeTiles(inputDir, outputDir, workers, callback) {
         } else {
 
           //If all cols are written.
-          if (currentCol === cols.length) {
+          if (finishedCol === cols.length) {
 
             //Clear the interval
             clearInterval(createColsInterval);

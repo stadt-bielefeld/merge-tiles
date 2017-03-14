@@ -32,7 +32,7 @@ program.on('--help', function() {
 
 //Header
 console.log('###################################################');
-console.log('## ' + packageJson.name + ' v' + packageJson.version + ' #############################');
+console.log('## ' + packageJson.name + ' v' + packageJson.version + ' ##############################');
 console.log('###################################################');
 
 //Parse arguments
