@@ -32,7 +32,7 @@ program.on('--help', function() {
 
 //Header
 console.log('###################################################');
-console.log('## ' + packageJson.name + ' v' + packageJson.version + ' ##############################');
+console.log('## ' + packageJson.name + ' v' + packageJson.version + ' #############################');
 console.log('###################################################');
 
 //Parse arguments
@@ -99,5 +99,5 @@ mergeTiles(program.input, program.output, parseInt(program.workers), (err) => {
 
 //Footer
 console.log('###################################################');
-console.log('## Stop process with Ctrl+C ######################');
+console.log('## Stop process with Ctrl+C #######################');
 console.log('###################################################');
