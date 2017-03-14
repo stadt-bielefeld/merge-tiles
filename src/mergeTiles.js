@@ -162,7 +162,7 @@ function mergeTiles(inputDir, outputDir, workers, callback) {
                         var file = outputDir + '/' + idx + '.' + inputExt;
                         fs.unlinkSync(file);
                       });
-                      console.log('... finisched removing.');
+                      console.log('... finished removing.');
                       callback(null);
                     }
 
