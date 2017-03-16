@@ -41,6 +41,10 @@ function convertImage(file, formats, callback) {
 
           console.log('Creating ' + fileInfo.name + '.' + formats[currentFormat] + ' ...');
 
+          if(formats[currentFormat] === 'tif' || formats[currentFormat] === 'jpg'){
+            img.flatten().background('white');
+          }
+
           img.flatten().background('white').write(fileInfo.dir + '/' + fileInfo.name + '.' + formats[currentFormat], (err) => {
             if (err) {
               clearInterval(formatsInterval);
