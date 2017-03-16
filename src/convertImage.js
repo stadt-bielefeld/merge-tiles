@@ -27,7 +27,7 @@ function convertImage(file, formats, callback) {
 
 
   let imageInfo = isImage(file);
-  let img = gm(file).flatten().background('white');
+  let img = gm(file);
 
   if (imageInfo) {
 
@@ -41,7 +41,7 @@ function convertImage(file, formats, callback) {
 
           console.log('Creating ' + fileInfo.name + '.' + formats[currentFormat] + ' ...');
 
-          img.write(fileInfo.dir + '/' + fileInfo.name + '.' + formats[currentFormat], (err) => {
+          img.flatten().background('white').write(fileInfo.dir + '/' + fileInfo.name + '.' + formats[currentFormat], (err) => {
             if (err) {
               clearInterval(formatsInterval);
               callback(err);
