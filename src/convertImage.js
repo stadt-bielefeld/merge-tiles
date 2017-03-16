@@ -39,13 +39,15 @@ function convertImage(file, formats, callback) {
 
         if (currentFormat < formats.length) {
 
+
           console.log('Creating ' + fileInfo.name + '.' + formats[currentFormat] + ' ...');
 
+          let img = gm(file);
           if(formats[currentFormat] === 'tif' || formats[currentFormat] === 'jpg'){
             img.flatten().background('white');
           }
 
-          img.flatten().background('white').write(fileInfo.dir + '/' + fileInfo.name + '.' + formats[currentFormat], (err) => {
+          img.write(fileInfo.dir + '/' + fileInfo.name + '.' + formats[currentFormat], (err) => {
             if (err) {
               clearInterval(formatsInterval);
               callback(err);
