@@ -27,7 +27,7 @@ function convertImage(file, formats, callback) {
 
 
   let imageInfo = isImage(file);
-  let img = gm(file);
+  let img = gm(file).flatten().background('white');
 
   if (imageInfo) {
 
