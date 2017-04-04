@@ -85,6 +85,9 @@ function mergeTiles(inputDir, outputDir, workers, callback) {
       }
     });
 
+    //Sort the last col
+    cols[colCounter].sort(compareFilesOnY);
+
 
     let currentWorkers = 0; //Current gm workers for creation of cols
     let currentCol = 0; //Current col

@@ -32,6 +32,8 @@ npm install -g merge-tiles
 
 ## Get started
 
+[Documentation](https://stadt-bielefeld.github.io/merge-tiles/index.html)
+
 ### Command line:
 
 ```
