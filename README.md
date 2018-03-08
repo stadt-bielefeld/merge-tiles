@@ -1,6 +1,5 @@
 # merge-tiles
-It allows you to merge a directory of wms-downloader tiles to a single tile.
-
+It allows you to merge a directory of wms-downloader tiles to a single tile or more tiles.
 
 ## Installation
 
@@ -32,8 +31,6 @@ npm install -g merge-tiles
 
 ## Get started
 
-[Documentation](https://stadt-bielefeld.github.io/merge-tiles/index.html)
-
 ### Command line:
 
 ```
@@ -59,24 +56,24 @@ merge -i ./input -o ./output -w 2 -f tif_gif_jpg
 
 ### Node.js:
 ```js
-let mergeTiles = require('merge-tiles').mergeTiles;
+const merge = require('merge-tiles');
 
-mergeTiles('./input', './output', 2, (err) => {
-  if(err){
-    console.log(err);
-  }
-});
-```
+let options = {
+  inputDir: __dirname + '/input',
+  outputDir: __dirname + '/output',
+  outputFormats: ['gif', 'jpg'],
+  workers: 4
+};
 
-```js
-let convertImage = require('merge-tiles').convertImage;
-
-convertImage('./output/all.png', ['tif', 'gif', 'jpg'], (err) => {
+merge(options, (err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
+  } else {
+    console.log('Merged!');
   }
 });
 ```
+
 
 ## License
 MIT
