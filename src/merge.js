@@ -15,6 +15,7 @@ function merge(options, callback) {
   let check = checkSingleTile(info);
   let mergedTiles = determineMergedTiles(info, check);
 
+  //console.log(mergedTiles);
 
   mergeTiles(info, mergedTiles, (err) => {
     if (err) {

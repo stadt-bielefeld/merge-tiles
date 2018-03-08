@@ -115,7 +115,7 @@ function scanInputData(options) {
   opt.tiles.height = imgSize.height;
 
   //TODO, detect pixels size from image
-  opt.tiles.bytesPerPixel = 6; //24 bit RGB: 3 bytes per pixel (one byte for each of R, G, B)
+  opt.tiles.bytesPerPixel = 12; //24 bit RGB: 3 bytes per pixel (one byte for each of R, G, B)
 
 
   return opt;

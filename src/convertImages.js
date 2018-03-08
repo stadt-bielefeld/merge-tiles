@@ -27,7 +27,7 @@ function convertImages(info, tiles, callback) {
     return tasks[taskIndex];
   };
 
-  console.log(tasks);
+  //console.log(tasks);
 
   convertImage(getNextTask, callback);
 

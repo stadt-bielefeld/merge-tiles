@@ -1,12 +1,9 @@
 #!/usr/bin/env node
 
 //-- Modules -------------------------------------------------------------------
-let fs = require('fs.extra');
-let program = require('commander'); //CLI support for node.js
-let packageJson = require(__dirname + '/../package.json'); //Package informations
-let mergeTiles = require(__dirname + '/../index.js').mergeTiles;
-let convertImage = require(__dirname + '/../index.js').convertImage;
-let isImage = require(__dirname + '/../index.js').isImage;
+const program = require('commander'); //CLI support for node.js
+const packageJson = require(__dirname + '/../package.json'); //Package informations
+const merge = require(__dirname + '/../src/merge.js');
 //-- Modules -------------------------------------------------------------------
 
 //Set version
@@ -38,62 +35,45 @@ console.log('###################################################');
 //Parse arguments
 program.parse(process.argv);
 
+let options = {
+  inputDir: __dirname,
+  outputDir: __dirname,
+  outputFormats: [],
+  workers: 1
+};
+
 //Set input directory
-if (!program.input) {
-  program.input = '.';
+if(program.input){
+  options.inputDir = program.input;
 }
-console.log('  Input directory: ' + program.input);
-
-//Set output directory
-if (!program.output) {
-  program.output = '.';
-}
-console.log('  Output directory: ' + program.output);
+console.log('  Input directory: ' + options.inputDir);
 
 
 //Set output directory
-if (!program.workers) {
-  program.workers = '1';
+if(program.output){
+  options.outputDir = program.output;
 }
-console.log('  Workers: ' + program.workers);
+console.log('  Output directory: ' + options.outputDir);
+
+
+//Set workers
+if (program.workers) {
+   options.workers = program.workers;
+}
+console.log('  Workers: ' + options.workers);
 
 //Set output directory
 if (program.formats) {
-  program.formats = program.formats.split('_');
-  console.log('  Formats: ' + program.formats);
+  options.outputFormats = program.formats.split('_');
 }
-
-
+console.log('  Formats: ' + options.outputFormats);
 
 //Merge tiles
-mergeTiles(program.input, program.output, parseInt(program.workers), (err) => {
+merge(options, (err) => {
   if (err) {
-    console.log(err);
+    console.error(err);
   } else {
-    if(program.formats){
-      //Read filenames
-      let inputFiles = fs.readdirSync(program.output);
-      let inputFileInfo;
-
-      //Determine imageInfo of input file
-      inputFiles.forEach((file)=>{
-        let imageInfo = isImage(file);
-        if(imageInfo){
-          inputFileInfo = imageInfo;
-        }
-      });
-
-      //Convert the single tile in the other formats.
-      if(inputFileInfo){
-        convertImage(program.output + '/all.' + inputFileInfo.ext, program.formats, (err) => {
-          if (err) {
-            console.log(err);
-          }
-        });
-      }
-
-    }
-
+    console.log('Merged!');
   }
 });
 
