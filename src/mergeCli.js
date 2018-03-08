@@ -36,8 +36,8 @@ console.log('###################################################');
 program.parse(process.argv);
 
 let options = {
-  inputDir: __dirname,
-  outputDir: __dirname,
+  inputDir: '.',
+  outputDir: '.',
   outputFormats: [],
   workers: 1
 };
