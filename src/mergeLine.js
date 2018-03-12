@@ -11,10 +11,7 @@ function mergeLine(info, tile, getNextLineIndex, callback) {
     let img = gm(file);
 
     for (let x = tile.x.from + 1; x <= tile.x.to; x++) {
-
       file = info.inputDir + '/x' + x + '_y' + y + '.' + info.tiles.fileExt;
-      //console.log(file + '  ' + tile.x.to);
-      //console.log(tile);
       img.append(file, true);
     }
 

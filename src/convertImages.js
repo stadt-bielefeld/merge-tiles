@@ -11,6 +11,7 @@ function convertImages(info, tiles, callback) {
     info.outputFormats.forEach((f) => {
       if (f.fileExt !== info.tiles.fileExt) {
         let task = {};
+        task.name = t.name;
         task.inputFile = inputFile;
         task.inputFormat = info.tiles.fileExt;
         task.outputFile = info.outputDir + '/' + f.fileExt + '/' + t.name + '.' + f.fileExt;
@@ -26,8 +27,6 @@ function convertImages(info, tiles, callback) {
     taskIndex++;
     return tasks[taskIndex];
   };
-
-  //console.log(tasks);
 
   convertImage(getNextTask, callback);
 

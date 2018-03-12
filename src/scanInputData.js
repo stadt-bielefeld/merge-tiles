@@ -51,7 +51,6 @@ function scanInputData(options) {
 
   let opt = {};
   opt.inputDir = path.resolve(options.inputDir);
-  console.log(opt.inputDir);
   opt.outputDir = path.resolve(options.outputDir);
   opt.outputFormats = [];
   opt.workers = 1;
@@ -115,7 +114,7 @@ function scanInputData(options) {
   opt.tiles.height = imgSize.height;
 
   //TODO, detect pixels size from image
-  opt.tiles.bytesPerPixel = 12; //24 bit RGB: 3 bytes per pixel (one byte for each of R, G, B)
+  opt.tiles.bytesPerPixel = 24; //24 bit RGB: 3 bytes per pixel (one byte for each of R, G, B)
 
 
   return opt;

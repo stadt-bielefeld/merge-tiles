@@ -1,6 +1,7 @@
 'use strict';
 
 const fs = require('fs-extra');
+const log = require(__dirname + '/logger.js');
 
 function copyWorldFile(info, tile){
   let inputFile = info.inputDir + '/x' + tile.x.from + '_y' + tile.y.from + '.' + info.tiles.worldFileExt;
@@ -19,7 +20,7 @@ function copyWorldFile(info, tile){
       fs.copySync(inputFile,f);
     });
   } catch (e) {
-    console.error(e);
+    log(e.message,'ERROR');
   }
 
 }

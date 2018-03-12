@@ -18,7 +18,6 @@ function determineMergedTiles(info, check) {
 
   //Single tile
   if (check.singleTile) {
-    //console.log('single');
     let tile = {};
     tile.singleTile = true;
     tile.name = 'x0_y0';
@@ -30,10 +29,6 @@ function determineMergedTiles(info, check) {
     tile.y.to = check.y;
     ret.push(tile);
   } else {
-    //console.log('more');
-    //
-
-
     //More tiles
     let xRanges = [];
     let yRanges = [];
@@ -83,10 +78,6 @@ function determineMergedTiles(info, check) {
     tileY.y.name = 'y' + yIndex;
     yRanges.push(tileY);
 
-    //console.log(xRanges);
-    //console.log(yRanges);
-
-
     for (let i = 0; i < yRanges.length; i++) {
       let yr = yRanges[i].y;
       for (let j = 0; j < xRanges.length; j++) {
@@ -106,8 +97,6 @@ function determineMergedTiles(info, check) {
       }
     }
   }
-
-  //console.log(ret);
 
   return ret;
 }
