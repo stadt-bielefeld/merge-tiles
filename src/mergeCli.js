@@ -58,7 +58,7 @@ console.log('  Output directory: ' + options.outputDir);
 
 //Set workers
 if (program.workers) {
-   options.workers = program.workers;
+   options.workers = parseInt(program.workers);
 }
 console.log('  Workers: ' + options.workers);
 
