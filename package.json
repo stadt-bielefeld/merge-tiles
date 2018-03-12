@@ -1,6 +1,6 @@
 {
   "name": "merge-tiles",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "It allows you to merge a directory of wms-downloader tiles to a single tile or more tiles.",
   "main": "src/merge.js",
   "bin": {
