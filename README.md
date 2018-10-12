@@ -1,5 +1,5 @@
 # merge-tiles
-It allows you to merge a directory of (wms-downloader)[https://github.com/stadt-bielefeld/wms-downloader] tiles to a single tile or more tiles.
+It allows you to merge a directory of [wms-downloader](https://github.com/stadt-bielefeld/wms-downloader) tiles to a single tile or more tiles.
 
 ## Installation
 
