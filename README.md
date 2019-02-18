@@ -84,8 +84,8 @@ merge(options, (err) => {
 
 ## Documentation
 
-* [API documentation](docs/api/index.html)
-* [Changelog](docs/changelog/index.md)
+* [API documentation](https://stadt-bielefeld.github.io/merge-tiles/docs/api/index.html)
+* [Changelog](https://github.com/stadt-bielefeld/merge-tiles/blob/master/docs/changelog/index.md)
 
 ## Developer
 
