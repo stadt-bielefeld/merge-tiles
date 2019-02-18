@@ -97,4 +97,4 @@ npm run build-api-doc
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/stadt-bielefeld/merge-tiles/blob/master/LICENSE)
