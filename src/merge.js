@@ -1,7 +1,5 @@
 'use strict';
 
-const fs = require('fs-extra');
-const gm = require('gm');
 const scanInputData = require(__dirname + '/scanInputData.js');
 const checkSingleTile = require(__dirname + '/checkSingleTile.js');
 const determineMergedTiles = require(__dirname + '/determineMergedTiles.js');
@@ -10,6 +8,11 @@ const ensureOutputDirs = require(__dirname + '/ensureOutputDirs.js');
 const convertImages = require(__dirname + '/convertImages.js');
 const log = require(__dirname + '/logger.js');
 
+/**
+ * TODO
+ * @param {*} options 
+ * @param {*} callback 
+ */
 function merge(options, callback) {
   let info = scanInputData(options);
   ensureOutputDirs(info);

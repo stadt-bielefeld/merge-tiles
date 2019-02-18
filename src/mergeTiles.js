@@ -3,6 +3,13 @@
 const mergeTile = require(__dirname + '/mergeTile.js');
 const log = require(__dirname + '/logger.js');
 
+/**
+ * TODO
+ * @param {*} info 
+ * @param {*} tiles 
+ * @param {*} callback 
+ * @param {*} index 
+ */
 function mergeTiles(info, tiles, callback, index) {
   if (!index) {
     index = 0;

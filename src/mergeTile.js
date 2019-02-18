@@ -6,6 +6,12 @@ const mergeLine = require(__dirname + '/mergeLine.js');
 const copyWorldFile = require(__dirname + '/copyWorldFile.js');
 const log = require(__dirname + '/logger.js');
 
+/**
+ * TODO
+ * @param {*} info 
+ * @param {*} tile 
+ * @param {*} callback 
+ */
 function mergeTile(info, tile, callback) {
 
   //Correct workers, if you have not enough memory

@@ -1,7 +1,5 @@
 'use strict';
 
-const scanInputData = require(__dirname + '/scanInputData.js');
-
 /**
  * Checks if you have enough memory for single tile
  * @param  {object} info Return object from scanInputData

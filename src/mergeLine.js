@@ -2,6 +2,13 @@
 
 const gm = require('gm');
 
+/**
+ * TODO
+ * @param {*} info 
+ * @param {*} tile 
+ * @param {*} getNextLineIndex 
+ * @param {*} callback 
+ */
 function mergeLine(info, tile, getNextLineIndex, callback) {
 
   let y = getNextLineIndex();

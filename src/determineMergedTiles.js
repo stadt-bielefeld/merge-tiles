@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * TODO
  * [determineMergedTiles description]
  * @param  {[type]} info  [description]
  * @param  {[type]} check [description]

@@ -1,0 +1,1400 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>merge-tiles 1.0.4 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+  <meta name='description' content='It allows you to reduce tiles of a directory of wms-downloader tiles'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>merge-tiles</h3>
+          <div class='mb1'><code>1.0.4</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#checksingletile'
+                  class="">
+                  checkSingleTile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#_checksubtile'
+                  class="">
+                  _checkSubTile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#convertimage'
+                  class="">
+                  convertImage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#convertimages'
+                  class="">
+                  convertImages
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#copyworldfile'
+                  class="">
+                  copyWorldFile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#determinemergedtiles'
+                  class="">
+                  determineMergedTiles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#determinexy'
+                  class="">
+                  determineXY
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#ensureoutputdirs'
+                  class="">
+                  ensureOutputDirs
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#isimage'
+                  class="">
+                  isImage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#log'
+                  class="">
+                  log
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#merge'
+                  class="">
+                  merge
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mergeline'
+                  class="">
+                  mergeLine
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mergetile'
+                  class="">
+                  mergeTile
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#mergetiles'
+                  class="">
+                  mergeTiles
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#scaninputdata'
+                  class="">
+                  scanInputData
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='checksingletile'>
+      checkSingleTile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/checkSingleTile.js#L8-L22'>
+      <span>src/checkSingleTile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Checks if you have enough memory for single tile</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>checkSingleTile(info: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Return object from scanInputData
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        Object like { singleTile: false, x: 8, y: 11 }
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='_checksubtile'>
+      _checkSubTile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/checkSingleTile.js#L31-L47'>
+      <span>src/checkSingleTile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Determines the maximum size of a merged tile</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_checkSubTile(x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, info: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    [description]
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    [description]
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Return object from scanInputData
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        Object like { singleTile: false, x: 8, y: 11 }
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='convertimage'>
+      convertImage
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/convertImage.js#L11-L33'>
+      <span>src/convertImage.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>convertImage(getNextTask: any, callback: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>getNextTask</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='convertimages'>
+      convertImages
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/convertImages.js#L12-L39'>
+      <span>src/convertImages.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>convertImages(info: any, tiles: any, callback: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tiles</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='copyworldfile'>
+      copyWorldFile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/copyWorldFile.js#L11-L31'>
+      <span>src/copyWorldFile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>copyWorldFile(info: any, tile: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tile</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='determinemergedtiles'>
+      determineMergedTiles
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/determineMergedTiles.js#L17-L103'>
+      <span>src/determineMergedTiles.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO
+[determineMergedTiles description]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>determineMergedTiles(info: [type], check: [type]): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>([type])</code>
+	    [description]
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>check</span> <code class='quiet'>([type])</code>
+	    [description]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        [description]
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">//Return object</span>
+[
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'x0_y0'</span>, <span class="hljs-attr">x</span>: { <span class="hljs-attr">from</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">to</span>: <span class="hljs-number">15</span> }, <span class="hljs-attr">y</span>: { <span class="hljs-attr">from</span>:  <span class="hljs-number">0</span>, <span class="hljs-attr">to</span>: <span class="hljs-number">21</span> } },
+  { <span class="hljs-attr">name</span>: <span class="hljs-string">'x0_y1'</span>, <span class="hljs-attr">x</span>: { <span class="hljs-attr">from</span>: <span class="hljs-number">0</span>, <span class="hljs-attr">to</span>: <span class="hljs-number">15</span> }, <span class="hljs-attr">y</span>: { <span class="hljs-attr">from</span>: <span class="hljs-number">22</span>, <span class="hljs-attr">to</span>: <span class="hljs-number">43</span> } }
+]</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='determinexy'>
+      determineXY
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/determineXY.js#L8-L16'>
+      <span>src/determineXY.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Determines the x and y value as integer from filename.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>determineXY(file: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>file</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    Filename of a wms-downloader tile.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        Object with x and y values as integer like {file: "x0_y1.tif", x: 0, y: 1}.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='ensureoutputdirs'>
+      ensureOutputDirs
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/ensureOutputDirs.js#L9-L15'>
+      <span>src/ensureOutputDirs.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>ensureOutputDirs(info: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='isimage'>
+      isImage
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/isImage.js#L10-L26'>
+      <span>src/isImage.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Checks, if the file is a supported image.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>isImage(file: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>file</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    File name
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>:
+        false: File name is no image; string: File extension
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='log'>
+      log
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/logger.js#L8-L17'>
+      <span>src/logger.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>log(msg: any, level: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msg</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>level</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='merge'>
+      merge
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/merge.js#L16-L36'>
+      <span>src/merge.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>merge(options: any, callback: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mergeline'>
+      mergeLine
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/mergeLine.js#L12-L38'>
+      <span>src/mergeLine.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>mergeLine(info: any, tile: any, getNextLineIndex: any, callback: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tile</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>getNextLineIndex</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mergetile'>
+      mergeTile
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/mergeTile.js#L15-L83'>
+      <span>src/mergeTile.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>mergeTile(info: any, tile: any, callback: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tile</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='mergetiles'>
+      mergeTiles
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/mergeTiles.js#L13-L31'>
+      <span>src/mergeTiles.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>TODO</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>mergeTiles(info: any, tiles: any, callback: any, index: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>info</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>tiles</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>callback</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>index</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scaninputdata'>
+      scanInputData
+    </h3>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/stadt-bielefeld/merge-tiles/blob/9fc31a0b080bbcd43f85bd52db0c3aafa95b8816/src/scanInputData.js#L50-L121'>
+      <span>src/scanInputData.js</span>
+      </a>
+    
+  </div>
+  
+
+  <p>Determines information about the input data</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>scanInputData(options: any): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>options</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        Object with a lots of information about the input data, see example.
+
+      
+    
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'><span class="hljs-comment">//execute function</span>
+scanInputData(<span class="hljs-string">'D:/input'</span>, <span class="hljs-string">'D:/output'</span>, [<span class="hljs-string">'gif'</span>, <span class="hljs-string">'tif'</span>]);
+
+<span class="hljs-comment">//return object</span>
+{
+  <span class="hljs-string">"inputDir"</span>: <span class="hljs-string">"D:/input"</span>,
+  <span class="hljs-string">"outputDir"</span>: <span class="hljs-string">"D:/output"</span>,
+  <span class="hljs-string">"outputFormats"</span>: [
+    {
+      <span class="hljs-string">"fileExt"</span>: <span class="hljs-string">"gif"</span>,
+      <span class="hljs-string">"worldFileExt"</span>: <span class="hljs-string">"gfw"</span>
+    }
+  ],
+  <span class="hljs-string">"workers"</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-string">"freeMemory"</span>: <span class="hljs-number">12207316992</span>,
+  <span class="hljs-string">"tiles"</span>: {
+    <span class="hljs-string">"fileExt"</span>: <span class="hljs-string">"tif"</span>,
+    <span class="hljs-string">"worldFileExt"</span>: <span class="hljs-string">"tfw"</span>,
+    <span class="hljs-string">"numOfX"</span>: <span class="hljs-number">15</span>,
+    <span class="hljs-string">"numOfY"</span>: <span class="hljs-number">22</span>,
+    <span class="hljs-string">"width"</span>: <span class="hljs-number">3000</span>,
+    <span class="hljs-string">"height"</span>: <span class="hljs-number">3000</span>,
+    <span class="hljs-string">"bytesPerPixel"</span>: <span class="hljs-number">3</span>
+  }
+}</pre>
+    
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

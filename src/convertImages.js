@@ -3,6 +3,12 @@
 
 const convertImage = require(__dirname + '/convertImage.js');
 
+/**
+ * TODO
+ * @param {*} info 
+ * @param {*} tiles 
+ * @param {*} callback 
+ */
 function convertImages(info, tiles, callback) {
   let tasks = [];
 

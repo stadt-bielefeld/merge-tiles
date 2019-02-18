@@ -3,6 +3,11 @@
 const fs = require('fs-extra');
 const log = require(__dirname + '/logger.js');
 
+/**
+ * TODO
+ * @param {*} info 
+ * @param {*} tile 
+ */
 function copyWorldFile(info, tile){
   let inputFile = info.inputDir + '/x' + tile.x.from + '_y' + tile.y.from + '.' + info.tiles.worldFileExt;
   let outputFiles = [];

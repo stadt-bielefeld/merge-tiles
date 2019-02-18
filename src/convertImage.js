@@ -3,6 +3,11 @@
 const gm = require('gm');
 const log = require(__dirname + '/logger.js');
 
+/**
+ * TODO
+ * @param {*} getNextTask 
+ * @param {*} callback 
+ */
 function convertImage(getNextTask, callback) {
   let task = getNextTask();
   if (task) {

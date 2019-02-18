@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * TODO
+ * @param {*} msg 
+ * @param {*} level 
+ */
 function log(msg, level) {
   if (!level) {
     level = 'DEBUG';

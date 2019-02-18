@@ -1,4 +1,5 @@
 # merge-tiles
+
 It allows you to reduce tiles of a directory of [wms-downloader](https://github.com/stadt-bielefeld/wms-downloader) tiles.
 
 ## Installation
@@ -9,8 +10,9 @@ Windows:
 Use the installer from <https://nodejs.org/>
 
 Ubuntu / Debian:
-```sh
-sudo apt-get install nodejs npm
+
+```bash
+sudo apt install nodejs npm
 ```
 
 ### 02 GraphicsMagick
@@ -19,21 +21,24 @@ Windows:
 Use the installer from <http://www.graphicsmagick.org/>
 
 Ubuntu / Debian:
-```sh
-sudo apt-get install graphicsmagick
+
+```bash
+sudo apt install graphicsmagick
 ```
 
 ### 03 merge-tiles
+
 Use terminal:
-```sh
-npm install -g merge-tiles
+
+```bash
+npm i -g merge-tiles
 ```
 
 ## Get started
 
 ### Command line:
 
-```
+```plain
 Options:
    -h, --help              Output usage information
    -V, --version           Output the version number
@@ -44,17 +49,20 @@ Options:
 ```
 
 With default options:
-```sh
+
+```bash
 cd dirOfTiles
 merge
 ```
 
 With custom options:
-```sh
+
+```bash
 merge -i ./input -o ./output -w 2 -f tif_gif_jpg
 ```
 
 ### Node.js:
+
 ```js
 const merge = require('merge-tiles');
 
@@ -74,6 +82,19 @@ merge(options, (err) => {
 });
 ```
 
+## Documentation
+
+* [API documentation](docs/api/index.html)
+* [Changelog](docs/changelog/index.md)
+
+## Developer
+
+Build api documentation:
+
+```bash
+npm run build-api-doc
+```
 
 ## License
-MIT
+
+[MIT](LICENSE)

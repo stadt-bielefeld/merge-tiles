@@ -1,14 +1,13 @@
 {
   "name": "merge-tiles",
-  "version": "1.0.3",
-  "description": "It allows you to merge a directory of wms-downloader tiles to a single tile or more tiles.",
+  "version": "1.0.4",
+  "description": "It allows you to reduce tiles of a directory of wms-downloader tiles",
   "main": "src/merge.js",
   "bin": {
     "merge": "src/mergeCli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "example": "node examples/example.js"
+    "build-api-doc": "documentation build src/** --output docs/api --format html --github"
   },
   "repository": {
     "type": "git",
@@ -27,12 +26,15 @@
     "single",
     "tile"
   ],
-  "author": "Jens Pabel <jens.pabel@bielefeld.de>",
+  "author": "Jens Brokfeld <jens.brokfeld@bielefeld.de> (https://www.bielefeld.de/de/rv/ds_stadtverwaltung/vuk)",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
-    "fs-extra": "^5.0.0",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
     "gm": "^1.23.0",
-    "image-size": "^0.6.2"
+    "image-size": "^0.7.2"
+  },
+  "devDependencies": {
+    "documentation": "^9.1.1"
   }
 }
