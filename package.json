@@ -1,6 +1,6 @@
 {
   "name": "merge-tiles",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "It allows you to reduce tiles of a directory of wms-downloader tiles",
   "main": "src/merge.js",
   "bin": {
@@ -29,12 +29,12 @@
   "author": "Jens Brokfeld <jens.brokfeld@bielefeld.de> (https://www.bielefeld.de/de/rv/ds_stadtverwaltung/vuk)",
   "license": "MIT",
   "dependencies": {
-    "commander": "^5.0.0",
-    "fs-extra": "^9.0.0",
+    "commander": "^6.1.0",
+    "fs-extra": "^9.0.1",
     "gm": "^1.23.1",
-    "image-size": "^0.8.3"
+    "image-size": "^0.9.1"
   },
   "devDependencies": {
-    "documentation": "^12.3.0"
+    "documentation": "^13.0.2"
   }
 }
